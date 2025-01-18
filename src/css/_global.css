@@ -7,5 +7,5 @@ html {
 }
 
 body {
-  @apply font-catamaran font-light text-light-700 h-full
+  @apply font-catamaran font-light text-light-700 dark:text-dark-200 bg-white dark:bg-dark-700
 }
