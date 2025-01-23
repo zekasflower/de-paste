@@ -47,7 +47,7 @@ watchDebounced(pasted, () => {
 </script>
 
 <template>
-  <section class="flex max-lg:flex-col lg:items-stretch h-screen">
+  <section class="flex max-lg:flex-col lg:items-stretch h-screen" :class="{ 'pb-20': history?.length }">
     <!-- Just Paste It Section -->
     <section
       class="
@@ -148,7 +148,7 @@ watchDebounced(pasted, () => {
       <!-- History footer clear buttons -->
       <footer
         class="
-          sticky bottom-0 left-0 w-full lg:static bg-white dark:bg-dark-700
+          fixed bottom-0 left-0 w-full lg:static bg-white dark:bg-dark-700
           p-4 lg:p-6 border-t-2 dark:border-dark-500 max-lg:mt-4 flex justify-center
         "
       >
