@@ -125,7 +125,7 @@ watchDebounced(pasted, () => {
                 <!-- Copy button -->
                 <button
                   class="text-2xl hover:text-light-900 dark:text-dark-200 dark:hover:text-dark-100"
-                  :class="{ 'xl:hidden': element.hovered }"
+                  :class="{ 'xl:hidden': !element.hovered }"
                   @click="copy()"
                 >
                   <Icon icon="heroicons:clipboard" />
@@ -134,7 +134,7 @@ watchDebounced(pasted, () => {
                 <!-- Remove button -->
                 <button
                   class="text-2xl text-rose-700 dark:text-rose-600 hover:text-rose-800 dark:hover:text-rose-500"
-                  :class="{ 'xl:hidden': element.hovered }"
+                  :class="{ 'xl:hidden': !element.hovered }"
                   @click.stop="history.splice(index, 1)"
                   >
                   <Icon icon="heroicons:trash" />
