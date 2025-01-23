@@ -47,7 +47,7 @@ watchDebounced(pasted, () => {
 </script>
 
 <template>
-  <section class="flex max-lg:flex-col lg:items-stretch h-screen" :class="{ 'pb-20': history?.length }">
+  <section class="flex max-lg:flex-col lg:items-stretch h-screen overflow-hidden" :class="{ 'pb-20': history?.length }">
     <!-- Just Paste It Section -->
     <section
       class="
