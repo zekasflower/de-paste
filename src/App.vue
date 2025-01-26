@@ -20,13 +20,17 @@ const clearSelected = () => {
 const handlePaste = () => {
   if (pasted.value) return
 
-  pasted.value = true
-  const getRandom = Math.random().toString(36).slice(2, 10)
-  const itemKey = `key-${getRandom}`
-  const itemId = `id-${getRandom}`
-
+  
   navigator.clipboard.readText()
     .then(text => {
+      if (!text.trim()) return
+      
+      pasted.value = true
+
+      const getRandom = Math.random().toString(36).slice(2, 10)
+      const itemKey = `key-${getRandom}`
+      const itemId = `id-${getRandom}`
+
       history.value.unshift({
         key: itemKey,
         id: itemId,
